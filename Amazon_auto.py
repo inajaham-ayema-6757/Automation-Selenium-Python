@@ -1,9 +1,9 @@
 from selenium import webdriver
 import time
 
-myuname = "9579351754"
-mypass = "Ameya@6757"
-bookname = "Dan Brown Origin"
+myuname = "Your_Username"
+mypass = "Your_Password"
+productname = "Product_To_Search"
 bdriver = webdriver.Chrome("D:\chromedriver_win32\chromedriver.exe")
 bdriver.get("https://www.amazon.in/")
 bdriver.maximize_window()
@@ -20,11 +20,11 @@ bdriver.find_element_by_id("ap_password").send_keys(mypass)
 bdriver.find_element_by_id("signInSubmit").click()
 time.sleep(2)
 
-bdriver.find_element_by_id("twotabsearchtextbox").send_keys(bookname)
+bdriver.find_element_by_id("twotabsearchtextbox").send_keys(productname)
 bdriver.find_element_by_class_name("nav-input").click()
 time.sleep(2)
 
-bdriver.find_element_by_link_text(bookname).click()
+bdriver.find_element_by_link_text(productname).click()
 time.sleep(10)
 
 bdriver.switch_to.window(bdriver.window_handles[1])
